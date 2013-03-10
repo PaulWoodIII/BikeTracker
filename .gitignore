@@ -1,0 +1,34 @@
+.svn
+.DS_Store
+
+# Exclude the build directory
+build/*
+
+# Exclude the Pods directory
+Pods/
+ 
+# Exclude temp nibs and swap files
+*~.nib
+*.swp
+ 
+# Exclude OS X folder attributes
+.DS_Store
+ 
+# Exclude user-specific XCode 3 and 4 files
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+**/*.perspectivev*
+*.pbxuser
+**/*.pbxuser
+*.xcworkspace
+*.xcuserstate
+xcuserdata
+*/xcuserdata
+*Breakpoints.xcbkptlist
+*UserInterfaceState.xcuserstate
+xcschememanagement.plist
+String2Prototypes.xcworkspace/xcuserdata/paul.xcuserdatad/UserInterfaceState.xcuserstate
+
