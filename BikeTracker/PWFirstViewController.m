@@ -26,4 +26,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
+ NSDateFormatter *incWalkinFormat = [[NSDateFormatter alloc] init];
+ NSLocale *usLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_GB"];
+ [incWalkinFormat setLocale:usLocale];
+ [incWalkinFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+ self.walkinFormat = incWalkinFormat;
+ 
+ */
+
 @end

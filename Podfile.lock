@@ -1,17 +1,14 @@
 
 PODS: 
 - AFNetworking (1.1.0)
-- Reachability (3.0.0)
 - SSToolkit (1.0.2)
 
 DEPENDENCIES: 
 - AFNetworking (~> 1.1.0)
-- Reachability (~> 3.0.0)
 - SSToolkit (~> 1.0.2)
 
 SPEC CHECKSUMS: 
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
-  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
   SSToolkit: 9751b7ec0d068dc1dc46c8121dfeff808f9e3d35
 
 COCOAPODS: 0.16.0

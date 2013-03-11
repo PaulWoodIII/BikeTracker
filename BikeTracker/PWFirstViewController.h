@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PWFirstViewController : UIViewController
+@interface PWFirstViewController : UIViewController {
+    
+}
+
+@property (nonatomic, strong) CLLocation *bestLocation;
 
 @end
