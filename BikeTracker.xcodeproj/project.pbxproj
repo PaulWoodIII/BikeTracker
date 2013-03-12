@@ -28,6 +28,14 @@
 		DA2E826916EC7474009328DE /* PWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2E826816EC7474009328DE /* PWNetworkManager.m */; };
 		DA2E826B16EC7A92009328DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E826A16EC7A92009328DE /* MobileCoreServices.framework */; };
 		DA2E826D16EC7A9E009328DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E826C16EC7A9E009328DE /* SystemConfiguration.framework */; };
+		DAC7B44D16EF4B8100B96FD6 /* forward-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44516EF4B8100B96FD6 /* forward-button.png */; };
+		DAC7B44E16EF4B8100B96FD6 /* forward-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44616EF4B8100B96FD6 /* forward-button@2x.png */; };
+		DAC7B44F16EF4B8100B96FD6 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44716EF4B8100B96FD6 /* back-button.png */; };
+		DAC7B45016EF4B8100B96FD6 /* back-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44816EF4B8100B96FD6 /* back-button@2x.png */; };
+		DAC7B45116EF4B8100B96FD6 /* reload-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44916EF4B8100B96FD6 /* reload-button.png */; };
+		DAC7B45216EF4B8100B96FD6 /* reload-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44A16EF4B8100B96FD6 /* reload-button@2x.png */; };
+		DAC7B45316EF4B8100B96FD6 /* stop-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44B16EF4B8100B96FD6 /* stop-button.png */; };
+		DAC7B45416EF4B8100B96FD6 /* stop-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44C16EF4B8100B96FD6 /* stop-button@2x.png */; };
 		E8C3759704064CDBB297A114 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9B0059DCD941FB8C584397 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +70,14 @@
 		DA2E826816EC7474009328DE /* PWNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWNetworkManager.m; sourceTree = "<group>"; };
 		DA2E826A16EC7A92009328DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DA2E826C16EC7A9E009328DE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DAC7B44516EF4B8100B96FD6 /* forward-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button.png"; sourceTree = "<group>"; };
+		DAC7B44616EF4B8100B96FD6 /* forward-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button@2x.png"; sourceTree = "<group>"; };
+		DAC7B44716EF4B8100B96FD6 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		DAC7B44816EF4B8100B96FD6 /* back-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button@2x.png"; sourceTree = "<group>"; };
+		DAC7B44916EF4B8100B96FD6 /* reload-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-button.png"; sourceTree = "<group>"; };
+		DAC7B44A16EF4B8100B96FD6 /* reload-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload-button@2x.png"; sourceTree = "<group>"; };
+		DAC7B44B16EF4B8100B96FD6 /* stop-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-button.png"; sourceTree = "<group>"; };
+		DAC7B44C16EF4B8100B96FD6 /* stop-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop-button@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +145,14 @@
 				DA2E823916EC2DD0009328DE /* PWSecondViewController.m */,
 				DA2E823B16EC2DD0009328DE /* second.png */,
 				DA2E823D16EC2DD0009328DE /* second@2x.png */,
+				DAC7B44516EF4B8100B96FD6 /* forward-button.png */,
+				DAC7B44616EF4B8100B96FD6 /* forward-button@2x.png */,
+				DAC7B44716EF4B8100B96FD6 /* back-button.png */,
+				DAC7B44816EF4B8100B96FD6 /* back-button@2x.png */,
+				DAC7B44916EF4B8100B96FD6 /* reload-button.png */,
+				DAC7B44A16EF4B8100B96FD6 /* reload-button@2x.png */,
+				DAC7B44B16EF4B8100B96FD6 /* stop-button.png */,
+				DAC7B44C16EF4B8100B96FD6 /* stop-button@2x.png */,
 				DA2E821A16EC2DD0009328DE /* Supporting Files */,
 				DA2E826716EC7474009328DE /* PWNetworkManager.h */,
 				DA2E826816EC7474009328DE /* PWNetworkManager.m */,
@@ -213,6 +237,14 @@
 				DA2E823716EC2DD0009328DE /* first@2x.png in Resources */,
 				DA2E823C16EC2DD0009328DE /* second.png in Resources */,
 				DA2E823E16EC2DD0009328DE /* second@2x.png in Resources */,
+				DAC7B44D16EF4B8100B96FD6 /* forward-button.png in Resources */,
+				DAC7B44E16EF4B8100B96FD6 /* forward-button@2x.png in Resources */,
+				DAC7B44F16EF4B8100B96FD6 /* back-button.png in Resources */,
+				DAC7B45016EF4B8100B96FD6 /* back-button@2x.png in Resources */,
+				DAC7B45116EF4B8100B96FD6 /* reload-button.png in Resources */,
+				DAC7B45216EF4B8100B96FD6 /* reload-button@2x.png in Resources */,
+				DAC7B45316EF4B8100B96FD6 /* stop-button.png in Resources */,
+				DAC7B45416EF4B8100B96FD6 /* stop-button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSToolkit.h"
 
-@interface PWSecondViewController : UIViewController
+@interface PWSecondViewController : UIViewController <SSWebViewDelegate>
+
+- (void)loadURLString:(NSString *)urlString;
 
 @end
