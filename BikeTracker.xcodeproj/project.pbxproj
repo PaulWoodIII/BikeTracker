@@ -28,6 +28,7 @@
 		DA2E826916EC7474009328DE /* PWNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2E826816EC7474009328DE /* PWNetworkManager.m */; };
 		DA2E826B16EC7A92009328DE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E826A16EC7A92009328DE /* MobileCoreServices.framework */; };
 		DA2E826D16EC7A9E009328DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E826C16EC7A9E009328DE /* SystemConfiguration.framework */; };
+		DA3526BD16F012D00021EFF7 /* PWLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3526BC16F012D00021EFF7 /* PWLocationManager.m */; };
 		DAC7B44D16EF4B8100B96FD6 /* forward-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44516EF4B8100B96FD6 /* forward-button.png */; };
 		DAC7B44E16EF4B8100B96FD6 /* forward-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44616EF4B8100B96FD6 /* forward-button@2x.png */; };
 		DAC7B44F16EF4B8100B96FD6 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC7B44716EF4B8100B96FD6 /* back-button.png */; };
@@ -70,6 +71,8 @@
 		DA2E826816EC7474009328DE /* PWNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWNetworkManager.m; sourceTree = "<group>"; };
 		DA2E826A16EC7A92009328DE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		DA2E826C16EC7A9E009328DE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DA3526BB16F012D00021EFF7 /* PWLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWLocationManager.h; sourceTree = "<group>"; };
+		DA3526BC16F012D00021EFF7 /* PWLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWLocationManager.m; sourceTree = "<group>"; };
 		DAC7B44516EF4B8100B96FD6 /* forward-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button.png"; sourceTree = "<group>"; };
 		DAC7B44616EF4B8100B96FD6 /* forward-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward-button@2x.png"; sourceTree = "<group>"; };
 		DAC7B44716EF4B8100B96FD6 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				DA2E821A16EC2DD0009328DE /* Supporting Files */,
 				DA2E826716EC7474009328DE /* PWNetworkManager.h */,
 				DA2E826816EC7474009328DE /* PWNetworkManager.m */,
+				DA3526BB16F012D00021EFF7 /* PWLocationManager.h */,
+				DA3526BC16F012D00021EFF7 /* PWLocationManager.m */,
 			);
 			path = BikeTracker;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				DA2E823316EC2DD0009328DE /* PWFirstViewController.m in Sources */,
 				DA2E823A16EC2DD0009328DE /* PWSecondViewController.m in Sources */,
 				DA2E826916EC7474009328DE /* PWNetworkManager.m in Sources */,
+				DA3526BD16F012D00021EFF7 /* PWLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

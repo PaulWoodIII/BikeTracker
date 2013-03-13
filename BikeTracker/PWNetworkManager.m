@@ -10,7 +10,7 @@
 
 @implementation PWNetworkManager
 
-#define kServerURL @"http://192.168.1.4:3000/"
+#define kServerURL @"http://192.168.1.188:3000/"
 
 + (id)sharedInstance {
     static PWNetworkManager *__sharedInstance;
@@ -32,16 +32,14 @@
     return self;
 }
 
-- (void)uploadStatusWithComment:(NSString *)comment
-                        withLat:(float)lat
-                        withLng:(float)lng
+- (void)uploadStatusWithLocation:(CLLocation *)location
                     withSuccess:(void (^)(id responseObject))success
                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:3];
-    [parameters setValue:comment forKey:@"title"];
-    [parameters setValue:[NSNumber numberWithFloat:lat] forKey:@"lat"];
-    [parameters setValue:[NSNumber numberWithFloat:lng] forKey:@"long"];
-    NSMutableURLRequest *request = [self requestWithMethod:@"POST" path:@"locations" parameters:parameters];
+    [parameters setValue:[NSNumber numberWithDouble:[location coordinate].latitude] forKey:@"lat"];
+    [parameters setValue:[NSNumber numberWithDouble:[location coordinate].longitude] forKey:@"lng"];
+    [parameters setValue:[NSNumber numberWithDouble:[location horizontalAccuracy]] forKey:@"hacc"];
+    NSMutableURLRequest *request = [self requestWithMethod:@"POST" path:@"addLocation" parameters:parameters];
     
     AFHTTPRequestOperation *operation = [[AFJSONRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)

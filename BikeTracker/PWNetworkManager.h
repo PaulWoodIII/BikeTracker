@@ -7,9 +7,14 @@
 //
 
 #import "AFNetworking.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface PWNetworkManager : AFHTTPClient
 
 + (id)sharedInstance;
+
+- (void)uploadStatusWithLocation:(CLLocation *)location
+                     withSuccess:(void (^)(id responseObject))success
+                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end
