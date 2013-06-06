@@ -8,6 +8,7 @@
 
 #import "PWLocationManager.h"
 #include <stdlib.h>
+#import "PWDefaults.h"
 
 @interface PWLocationManager ()
 
@@ -25,7 +26,7 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
 #pragma mark -
 #pragma mark Singelton methods
 
-+ (id)sharedInstance {
++ (PWLocationManager *)sharedInstance {
     static PWLocationManager *__sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -41,9 +42,37 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
         self.coreLocation = [[CLLocationManager alloc] init];
         self.coreLocation.delegate = self;
         self.coreLocation.desiredAccuracy = kCLLocationAccuracyBest;
+        self.refreshTimeInterval = [PWDefaults sharedInstance].preferedRefreshTimeInterval;
+        self.refreshWaitInterval = [PWDefaults sharedInstance].preferedRefreshWaitInterval;
+        self.refreshDistance = [PWDefaults sharedInstance].preferedRefreshDistance;
     }
     return self;
 }
+
+- (void)setRefreshTimeInterval:(NSTimeInterval)refreshTimeInterval{
+    if (refreshTimeInterval < 1.0) {
+        refreshTimeInterval = 1.0;
+    }
+    _refreshTimeInterval = refreshTimeInterval;
+    [PWDefaults sharedInstance].preferedRefreshTimeInterval = refreshTimeInterval;
+}
+
+- (void)setRefreshWaitInterval:(NSTimeInterval)refreshWaitInterval{
+    if (refreshWaitInterval < 1.0) {
+        refreshWaitInterval = 1.0;
+    }
+    _refreshWaitInterval = refreshWaitInterval;
+    [PWDefaults sharedInstance].preferedRefreshWaitInterval = refreshWaitInterval;
+}
+
+- (void)setRefreshDistance:(CLLocationDistance)refreshDistance{
+    if (refreshDistance < 1.0) {
+        refreshDistance = 1.0;
+    }
+    _refreshDistance = refreshDistance;
+    [PWDefaults sharedInstance].preferedRefreshDistance = refreshDistance;
+}
+
 
 - (void)startUpdatingLocation{
     [self refreshLocation];
@@ -56,7 +85,7 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
 }
 
 - (void)startUpdateTimer{
-    [self performSelector:@selector(updateAfterTimer) withObject:nil afterDelay:self.refreshRate];
+    [self performSelector:@selector(updateAfterTimer) withObject:nil afterDelay:self.refreshWaitInterval];
 }
 
 - (void)updateAfterTimer{
@@ -70,7 +99,9 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
         self.lastPostedLocation = self.bestLocation;
         [[NSNotificationCenter defaultCenter] postNotificationName:kPWLocationChanged object:self.bestLocation];
     }
-    
+    [PWDefaults sharedInstance].preferedRefreshWaitInterval = self.refreshWaitInterval;
+    [PWDefaults sharedInstance].preferedRefreshTimeInterval = self.refreshTimeInterval;
+    [PWDefaults sharedInstance].preferedRefreshDistance = self.refreshDistance;
     [self stopUpdatingLocation:NSLocalizedString(@"Acquired Location", @"Acquired Location")];
     self.bestLocation = location;
 }
@@ -162,7 +193,7 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
     
     NSTimeInterval locationAge = -[self.bestLocation.timestamp timeIntervalSinceNow];
     
-    if (locationAge < self.refreshRate && locationAge > 0) {
+    if (locationAge < self.refreshWaitInterval && locationAge > 0) {
         return;
     }
     self.coreLocation.delegate = self;
@@ -180,7 +211,7 @@ NSString *const kPWLocationNotFound = @"kPWLocationNotFound";
         authorizationStatus = [CLLocationManager authorizationStatus];
     }
     if ([CLLocationManager locationServicesEnabled] && authorizationStatus){
-        [self performSelector:@selector(timedOutUseBest) withObject:nil afterDelay:self.waitTime];
+        [self performSelector:@selector(timedOutUseBest) withObject:nil afterDelay:self.refreshTimeInterval];
     }
     
 }

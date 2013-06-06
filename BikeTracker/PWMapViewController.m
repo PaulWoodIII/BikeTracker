@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 paulwoodware. All rights reserved.
 //
 
-#import "PWSecondViewController.h"
+#import "PWMapViewController.h"
+#import "UIColor+FlatUI.h"
+#import "UIImage+FlatUI.h"
 
-
-@interface PWSecondViewController ()
+@interface PWMapViewController ()
 
 @property (nonatomic,strong) SSWebView *webView;
 @property (nonatomic,strong) UIActivityIndicatorView *indicator;
@@ -17,11 +18,12 @@
 @property (nonatomic,strong) UIBarButtonItem *forwardBarButton;
 @end
 
-@implementation PWSecondViewController
+@implementation PWMapViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.webView.backgroundColor = [UIColor cloudsColor];
     CGSize size = self.view.frame.size;
     self.webView = [[SSWebView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, size.height)];
 	self.webView.autoresizingMask = UIViewAutoresizingFlexibleWidth & UIViewAutoresizingFlexibleHeight;
@@ -34,9 +36,14 @@
 	self.forwardBarButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forward-button"] style:UIBarButtonItemStylePlain target:_webView action:@selector(goForward)];
     
 	UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    self.toolbar.tintColor = [UIColor midnightBlueColor];
+    [self.toolbar setBackgroundImage:[UIImage imageWithColor:[UIColor midnightBlueColor] cornerRadius:0.0]
+                  forToolbarPosition:UIToolbarPositionAny
+                          barMetrics:UIBarMetricsDefault];
+    [self.toolbar setShadowImage:[[UIImage alloc] init]
+              forToolbarPosition:UIToolbarPositionAny];
     
-	self.navigationController.toolbar.tintColor = [UIColor colorWithRed:0.369f green:0.392f blue:0.447f alpha:1.0f];
-    self.toolbarItems = [NSArray arrayWithObjects:
+    self.toolbar.items = [NSArray arrayWithObjects:
 						 _backBarButton,
 						 flexibleSpace,
 						 _forwardBarButton,
@@ -48,11 +55,10 @@
 	for (UIBarButtonItem *button in self.toolbarItems) {
 		button.imageInsets = UIEdgeInsetsMake(3.0f, 0.0f, 0.0f, 0.0f);
 	}
-    [self.navigationController setToolbarHidden:NO];
     [self.navigationController setNavigationBarHidden:YES];
 
     [self updateBrowserUI];
-    [self loadURLString:@"http://192.168.1.188:3000"];
+    [self loadURLString:@"172.16.1.20:3000"];
 }
 
 - (void)updateBrowserUI{

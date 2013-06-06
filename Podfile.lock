@@ -1,14 +1,20 @@
+PODS:
+  - AFNetworking (1.1.0)
+  - FlatUIKit (1.1)
+  - SSToolkit (1.0.2)
 
-DEPENDENCIES: 
-- AFNetworking (~> 1.1.0)
-- SSToolkit (~> 1.0.2)
+DEPENDENCIES:
+  - AFNetworking (~> 1.1.0)
+  - FlatUIKit (from `https://github.com/Grouper/FlatUIKit.git`)
+  - SSToolkit (~> 1.0.2)
 
-PODS: 
-- AFNetworking (1.1.0)
-- SSToolkit (1.0.2)
+EXTERNAL SOURCES:
+  FlatUIKit:
+    :git: https://github.com/Grouper/FlatUIKit.git
 
-COCOAPODS: 0.16.0
-
-SPEC CHECKSUMS: 
-  SSToolkit: 9751b7ec0d068dc1dc46c8121dfeff808f9e3d35
+SPEC CHECKSUMS:
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  FlatUIKit: 3b15b582ffcfa4e392bedc4d3c5461f9b11c1cc2
+  SSToolkit: eaa02ea1dce63eb9575292465e9939b83ffbabe0
+
+COCOAPODS: 0.20.2

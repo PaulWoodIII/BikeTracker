@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SSToolkit.h"
 
-@interface PWSecondViewController : UIViewController <SSWebViewDelegate>
+@interface PWMapViewController : UIViewController <SSWebViewDelegate>
+
+@property (nonatomic, strong) UIToolbar *toolbar;
 
 - (void)loadURLString:(NSString *)urlString;
 

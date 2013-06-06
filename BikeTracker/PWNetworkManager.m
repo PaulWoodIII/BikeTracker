@@ -10,7 +10,7 @@
 
 @implementation PWNetworkManager
 
-#define kServerURL @"http://192.168.1.188:3000/"
+#define kServerURL @"http://172.16.1.20:3000"
 
 + (id)sharedInstance {
     static PWNetworkManager *__sharedInstance;
@@ -42,19 +42,22 @@
     NSMutableURLRequest *request = [self requestWithMethod:@"POST" path:@"addLocation" parameters:parameters];
     
     AFHTTPRequestOperation *operation = [[AFJSONRequestOperation alloc] initWithRequest:request];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
+    [operation
+    setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         if (success) {
+            NSLog(@"network succes %@, with response: %@",operation, responseObject);
             success(responseObject);
         }
     }
-                                     failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
         if (failure) {
+            NSLog(@"network failure %@ with Error: %@", operation, error);
             failure(operation, error);
         }
     }];
-    
+    NSLog(@"network start");
     [self enqueueHTTPRequestOperation:operation];
 }
 

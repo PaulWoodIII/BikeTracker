@@ -17,14 +17,14 @@ extern NSString *const kPWLocationNotFound;
 }
 
 @property (nonatomic, retain) CLLocation *bestLocation;
-@property (readwrite) NSTimeInterval waitTime;
-- (void)setWaitTime:(NSTimeInterval)waitTime;
-@property (readwrite) NSTimeInterval refreshRate;
-- (void)setRefreshRate:(NSTimeInterval)refreshRate;
-@property (readwrite) CLLocationDistance refreshDistance;
+@property (nonatomic, readwrite) NSTimeInterval refreshTimeInterval;
+- (void)setRefreshTimeInterval:(NSTimeInterval)refreshTimeInterval;
+@property (nonatomic, readwrite) NSTimeInterval refreshWaitInterval;
+- (void)setRefreshWaitInterval:(NSTimeInterval)refreshWaitInterval;
+@property (nonatomic, readwrite) CLLocationDistance refreshDistance;
 - (void)setRefreshDistance:(CLLocationDistance)refreshDistance;
 
-+ (id) sharedInstance;
++ (PWLocationManager *) sharedInstance;
 - (void)startUpdatingLocation;
 - (void)stopUpdatingLocation;
 

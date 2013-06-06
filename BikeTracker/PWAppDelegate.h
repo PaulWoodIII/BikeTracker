@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PWAppDelegate : UIResponder <UIApplicationDelegate>
+@interface PWAppDelegate : UIResponder <UIApplicationDelegate> {
+    UIBackgroundTaskIdentifier bgTask;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
