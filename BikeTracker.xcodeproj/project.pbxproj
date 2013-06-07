@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		DA22941E17608A180072F446 /* PWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA22941D17608A170072F446 /* PWTabBarController.m */; };
 		DA229421176090770072F446 /* PWLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA229420176090760072F446 /* PWLocationsViewController.m */; };
+		DA2B99A4176155A9008C4DEA /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2B99A3176155A9008C4DEA /* map.png */; };
+		DA2B99A817615721008C4DEA /* stopwatch.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2B99A717615721008C4DEA /* stopwatch.png */; };
+		DA2B99AA1761575F008C4DEA /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = DA2B99A91761575F008C4DEA /* gears.png */; };
 		DA2E821416EC2DD0009328DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E821316EC2DD0009328DE /* UIKit.framework */; };
 		DA2E821616EC2DD0009328DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E821516EC2DD0009328DE /* Foundation.framework */; };
 		DA2E821816EC2DD0009328DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E821716EC2DD0009328DE /* CoreGraphics.framework */; };
@@ -57,6 +60,9 @@
 		DA22941D17608A170072F446 /* PWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWTabBarController.m; sourceTree = "<group>"; };
 		DA22941F176090760072F446 /* PWLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWLocationsViewController.h; sourceTree = "<group>"; };
 		DA229420176090760072F446 /* PWLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWLocationsViewController.m; sourceTree = "<group>"; };
+		DA2B99A3176155A9008C4DEA /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		DA2B99A717615721008C4DEA /* stopwatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopwatch.png; sourceTree = "<group>"; };
+		DA2B99A91761575F008C4DEA /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
 		DA2E820F16EC2DD0009328DE /* BikeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2E821316EC2DD0009328DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA2E821516EC2DD0009328DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,6 +176,7 @@
 				DA2E822E16EC2DD0009328DE /* MainStoryboard_iPad.storyboard */,
 				DA2E823116EC2DD0009328DE /* PWRecordViewController.h */,
 				DA2E823216EC2DD0009328DE /* PWRecordViewController.m */,
+				DA2B99A717615721008C4DEA /* stopwatch.png */,
 				DA896960176038C70055DF38 /* pause@2x.png */,
 				DA896961176038C70055DF38 /* pauseSelected@2x.png */,
 				DA896962176038C70055DF38 /* play@2x.png */,
@@ -180,6 +187,8 @@
 				DA2E823916EC2DD0009328DE /* PWMapViewController.m */,
 				DA89695D176031410055DF38 /* PWSettingsViewController.h */,
 				DA89695E176031410055DF38 /* PWSettingsViewController.m */,
+				DA2B99A91761575F008C4DEA /* gears.png */,
+				DA2B99A3176155A9008C4DEA /* map.png */,
 				DA2E823416EC2DD0009328DE /* first.png */,
 				DA2E823616EC2DD0009328DE /* first@2x.png */,
 				DA2E823B16EC2DD0009328DE /* second.png */,
@@ -302,6 +311,9 @@
 				DA896965176038C70055DF38 /* pauseSelected@2x.png in Resources */,
 				DA896966176038C70055DF38 /* play@2x.png in Resources */,
 				DA896967176038C70055DF38 /* playSelected@2x.png in Resources */,
+				DA2B99A4176155A9008C4DEA /* map.png in Resources */,
+				DA2B99A817615721008C4DEA /* stopwatch.png in Resources */,
+				DA2B99AA1761575F008C4DEA /* gears.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

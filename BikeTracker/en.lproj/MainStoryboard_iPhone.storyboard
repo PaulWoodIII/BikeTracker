@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Record-->
         <scene sceneID="crR-vb-Huw">
             <objects>
                 <navigationController definesPresentationContext="YES" id="E6O-kA-dEN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Record" id="v4L-2e-bBO"/>
+                    <tabBarItem key="tabBarItem" title="Record" image="stopwatch.png" id="v4L-2e-bBO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ri1-B1-nW1">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -66,7 +66,7 @@
         <scene sceneID="Q3x-Hd-FPf">
             <objects>
                 <navigationController definesPresentationContext="YES" id="63n-tq-rxl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="qUe-yB-2Ea"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.png" id="qUe-yB-2Ea"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="90b-Lf-O52">
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,7 +87,7 @@
         <scene sceneID="uu6-xo-Gjv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="0Wg-9C-VyD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="cVN-xM-sYy"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gears.png" id="cVN-xM-sYy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4aO-dx-m1W">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,6 +251,11 @@
             <point key="canvasLocation" x="-110" y="190"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gears.png" width="26" height="28"/>
+        <image name="map.png" width="26" height="21"/>
+        <image name="stopwatch.png" width="22" height="26"/>
+    </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
